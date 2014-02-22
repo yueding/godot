@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="godot_win"
-	ProjectGUID="{32EA24BE-3BCD-4918-A62A-6493999B3E04}"
-	RootNamespace="godot_win"
+	Name="script"
+	ProjectGUID="{7A9A69C0-A4D5-4657-9090-6D0D7D1BC8AF}"
+	RootNamespace="script"
 	Keyword="Win32Proj"
 	TargetFrameworkVersion="196613"
 	>
@@ -20,7 +20,7 @@
 			Name="Debug|Win32"
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
-			ConfigurationType="1"
+			ConfigurationType="4"
 			CharacterSet="1"
 			>
 			<Tool
@@ -41,7 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS"
+				PreprocessorDefinitions="WIN32;_DEBUG;_LIB"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
@@ -59,17 +59,10 @@
 				Name="VCPreLinkEventTool"
 			/>
 			<Tool
-				Name="VCLinkerTool"
-				LinkIncremental="2"
-				GenerateDebugInformation="true"
-				SubSystem="2"
-				TargetMachine="1"
+				Name="VCLibrarianTool"
 			/>
 			<Tool
 				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCManifestTool"
 			/>
 			<Tool
 				Name="VCXDCMakeTool"
@@ -81,9 +74,6 @@
 				Name="VCFxCopTool"
 			/>
 			<Tool
-				Name="VCAppVerifierTool"
-			/>
-			<Tool
 				Name="VCPostBuildEventTool"
 			/>
 		</Configuration>
@@ -91,7 +81,7 @@
 			Name="Release|Win32"
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
-			ConfigurationType="1"
+			ConfigurationType="4"
 			CharacterSet="1"
 			WholeProgramOptimization="1"
 			>
@@ -114,7 +104,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
-				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS"
+				PreprocessorDefinitions="WIN32;NDEBUG;_LIB"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
 				UsePrecompiledHeader="0"
@@ -131,19 +121,10 @@
 				Name="VCPreLinkEventTool"
 			/>
 			<Tool
-				Name="VCLinkerTool"
-				LinkIncremental="1"
-				GenerateDebugInformation="true"
-				SubSystem="2"
-				OptimizeReferences="2"
-				EnableCOMDATFolding="2"
-				TargetMachine="1"
+				Name="VCLibrarianTool"
 			/>
 			<Tool
 				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCManifestTool"
 			/>
 			<Tool
 				Name="VCXDCMakeTool"
@@ -155,9 +136,6 @@
 				Name="VCFxCopTool"
 			/>
 			<Tool
-				Name="VCAppVerifierTool"
-			/>
-			<Tool
 				Name="VCPostBuildEventTool"
 			/>
 		</Configuration>
@@ -165,12 +143,92 @@
 	<References>
 	</References>
 	<Files>
+		<Filter
+			Name="gdscript"
+			>
+			<File
+				RelativePath=".\gdscript\gd_compiler.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\gdscript\gd_compiler.h"
+				>
+			</File>
+			<File
+				RelativePath=".\gdscript\gd_editor.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\gdscript\gd_functions.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\gdscript\gd_functions.h"
+				>
+			</File>
+			<File
+				RelativePath=".\gdscript\gd_parser.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\gdscript\gd_parser.h"
+				>
+			</File>
+			<File
+				RelativePath=".\gdscript\gd_pretty_print.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\gdscript\gd_pretty_print.h"
+				>
+			</File>
+			<File
+				RelativePath=".\gdscript\gd_script.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\gdscript\gd_script.h"
+				>
+			</File>
+			<File
+				RelativePath=".\gdscript\gd_tokenizer.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\gdscript\gd_tokenizer.h"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="multiscript"
+			>
+			<File
+				RelativePath=".\multiscript\multi_script.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\multiscript\multi_script.h"
+				>
+			</File>
+		</Filter>
 		<File
-			RelativePath="..\platform\nacl\html\index.html"
+			RelativePath=".\ReadMe.txt"
 			>
 		</File>
 		<File
-			RelativePath="..\README.md"
+			RelativePath=".\register_script_types.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\register_script_types.h"
+			>
+		</File>
+		<File
+			RelativePath=".\script_binder.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\script_binder.h"
 			>
 		</File>
 	</Files>
