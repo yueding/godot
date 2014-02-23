@@ -31,6 +31,7 @@
 
 
 #ifdef _UNICODE
+#include <wchar.h>
 #define TRexChar wchar_t
 #define MAX_CHAR 0xFFFF
 #define _TREXC(c) L##c 

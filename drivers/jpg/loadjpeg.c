@@ -38,12 +38,23 @@
 #include <time.h>
 
 #define snprintf(buf, size, fmt, ...) sprintf(buf, fmt, __VA_ARGS__)
+#define __attribute__(x)
 
 static void exitmessage(const char *message) __attribute__((noreturn));
 static void exitmessage(const char *message)
 {
   printf("%s\n", message);
   exit(0);
+}
+
+static void* _tinyjpg_alloc(unsigned int amount) {
+
+	return memalloc(amount);
+}
+
+static void _tinyjpg_free(void *ptr) {
+
+	memfree(ptr);
 }
 
 static int filesize(FILE *fp)
@@ -149,7 +160,7 @@ int load_multiple_times(const char *filename, const char *outfilename, int outpu
   struct jdec_private *jdec;
   unsigned char *components[4];
 
-  jdec = tinyjpeg_init();
+  jdec = tinyjpeg_init(_tinyjpg_alloc,_tinyjpg_free);
   count = 0;
 
   /* Load the Jpeg into memory */
@@ -223,7 +234,7 @@ int convert_one_image(const char *infilename, const char *outfilename, int outpu
   fclose(fp);
 
   /* Decompress it */
-  jdec = tinyjpeg_init();
+  jdec = tinyjpeg_init(_tinyjpg_alloc,_tinyjpg_free);
   if (jdec == NULL)
     exitmessage("Not enough memory to alloc the structure need for decompressing\n");
 

@@ -1,63 +1,64 @@
 
-#include "memory.h"
+#include "core/os/memory.h"
 #include "speex_bind.h"
-#include
+#include "core/int_types.h"
+#include "core/print_string.h"
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-void *speex_alloc (int size) {
+	void *speex_alloc (int size) {
 
-	uint8_t * mem = (uint8_t*)memalloc(size);
-	for(int i=0;i<size;i++)
-		mem[i]=0;
-	return mem;
-}
+		uint8_t * mem = (uint8_t*)memalloc(size);
+		for(int i=0;i<size;i++)
+			mem[i]=0;
+		return mem;
+	}
 
-void *speex_alloc_scratch (int size) {
+	void *speex_alloc_scratch (int size) {
 
-	return memalloc(size);
-}
+		return memalloc(size);
+	}
 
-void *speex_realloc (void *ptr, int size) {
+	void *speex_realloc (void *ptr, int size) {
 
-	return memrealloc(ptr,size);
-}
+		return memrealloc(ptr,size);
+	}
 
-void speex_free (void *ptr) {
+	void speex_free (void *ptr) {
 
-	memfree(ptr);
-}
+		memfree(ptr);
+	}
 
-void speex_free_scratch (void *ptr) {
+	void speex_free_scratch (void *ptr) {
 
-	memfree(ptr);
-}
+		memfree(ptr);
+	}
 
-void _speex_fatal(const char *str, const char *file, int line) {
+	void _speex_fatal(const char *str, const char *file, int line) {
 
-	_err_print_error("SPEEX ERROR",p_file,p_line,str);
-}
+		_err_print_error("SPEEX ERROR",file,line,str);
+	}
 
-void speex_warning(const char *str) {
+	void speex_warning(const char *str) {
 
-	_err_print_error("SPEEX WARNING","",0,str);
-}
+		_err_print_error("SPEEX WARNING","",0,str);
+	}
 
-void speex_warning_int(const char *str, int val) {
+	void speex_warning_int(const char *str, int val) {
 
-	_err_print_error("SPEEX WARNING INT","Value",val,str);
-}
+		_err_print_error("SPEEX WARNING INT","Value",val,str);
+	}
 
-void speex_notify(const char *str) {
+	void speex_notify(const char *str) {
 
-	print_line(str);
-}
+		print_line(str);
+	}
 
-void _speex_putc(int ch, void *file) {
+	void _speex_putc(int ch, void *file) {
 
-	// will not putc, no.
-}
+		// will not putc, no.
+	}
 
 #ifdef __cplusplus
 }

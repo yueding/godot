@@ -41,7 +41,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "zlib.h"
+#include "drivers/builtin_zlib/zlib/zlib.h"
 
 #if defined(USE_FILE32API)
 #define fopen64 fopen

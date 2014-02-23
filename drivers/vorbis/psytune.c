@@ -18,7 +18,7 @@
 
 /* NB: this is dead code, retained purely for doc and reference value
        don't try to compile it */
-
+#ifndef _WIN32
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -39,11 +39,12 @@
 #include "registry.h"
 
 static vorbis_info_psy_global _psy_set0G={
-  0,   /* decaydBpms */
+  //0,   /* decaydBpms */
   8,   /* lines per eighth octave */
-  
+  //256,
   /* thresh sample period, preecho clamp trigger threshhold, range, minenergy */
-  256, {26.f,26.f,26.f,30.f}, {-90.f,-90.f,-90.f,-90.f}, -90.f,
+  {26.f,26.f,26.f,30.f}, {-90.f,-90.f,-90.f,-90.f},
+  -90.f,
   -6.f, 
   
   0,
@@ -522,3 +523,4 @@ int main(int argc,char *argv[]){
   fprintf(stderr,"Done\n\n");
   return 0;
 }
+#endif
