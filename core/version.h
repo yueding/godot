@@ -1,0 +1,6 @@
+#define VERSION_SHORT_NAME godot
+#define VERSION_NAME Godot Engine
+#define VERSION_MAJOR 1
+#define VERSION_MINOR 0
+#define VERSION_REVISION 3917
+#define VERSION_STATUS beta1
