@@ -656,7 +656,7 @@ Error Main::setup(const char *execpath,int argc, char *argv[],bool p_second_phas
 
 	message_queue = memnew( MessageQueue );
 
-	Globals::get_singleton()->register_global_defaults();
+	//Globals::get_singleton()->register_global_defaults();
 
 	if (p_second_phase)
 		return setup2();

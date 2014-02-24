@@ -3196,7 +3196,7 @@ EditorNode::EditorNode() {
 
 	editor_import_export = memnew( EditorImportExport );
 
-	register_exporters();
+	//register_exporters();
 
 	editor_import_export->load_config();
 
@@ -3961,7 +3961,7 @@ EditorNode::EditorNode() {
 	//add_editor_plugin( memnew( AnimationEditorPlugin(this) ) ); - not useful anymore
 	add_editor_plugin( memnew( ShaderEditorPlugin(this) ) );
 	add_editor_plugin( memnew( CameraEditorPlugin(this) ) );
-	//add_editor_plugin( memnew( FontEditorPlugin(this) ) ); obsolete
+	add_editor_plugin( memnew( FontEditorPlugin(this) ) );
 	add_editor_plugin( memnew( SampleEditorPlugin(this) ) );
 	add_editor_plugin( memnew( SampleLibraryEditorPlugin(this) ) );
 	add_editor_plugin( memnew( ThemeEditorPlugin(this) ) );
