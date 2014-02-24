@@ -41,7 +41,8 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				PreprocessorDefinitions="WIN32;_DEBUG;_LIB"
+				AdditionalIncludeDirectories="../;../core;../core/math;../platform/windows"
+				PreprocessorDefinitions="WIN32;_DEBUG;_LIB;DEBUG_ENABLED;TYPED_METHOD_BIND;XML_ENABLED;OLD_SCENE_FORMAT_ENABLED;TOOLS_ENABLED;MINIZIP_ENABLED"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
@@ -163,6 +164,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\io\base64.h"
+				>
+			</File>
+			<File
 				RelativePath=".\io\compression.cpp"
 				>
 			</File>
@@ -187,7 +192,19 @@
 				>
 			</File>
 			<File
+				RelativePath=".\io\fastlz.h"
+				>
+			</File>
+			<File
 				RelativePath=".\io\file_access_buffered.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\io\file_access_buffered.h"
+				>
+			</File>
+			<File
+				RelativePath=".\io\file_access_buffered_fa.h"
 				>
 			</File>
 			<File
@@ -203,7 +220,15 @@
 				>
 			</File>
 			<File
+				RelativePath=".\io\file_access_memory.h"
+				>
+			</File>
+			<File
 				RelativePath=".\io\file_access_network.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\io\file_access_network.h"
 				>
 			</File>
 			<File
@@ -211,7 +236,15 @@
 				>
 			</File>
 			<File
+				RelativePath=".\io\file_access_pack.h"
+				>
+			</File>
+			<File
 				RelativePath=".\io\file_access_zip.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\io\file_access_zip.h"
 				>
 			</File>
 			<File
@@ -227,7 +260,15 @@
 				>
 			</File>
 			<File
+				RelativePath=".\io\image_loader.h"
+				>
+			</File>
+			<File
 				RelativePath=".\io\ioapi.c"
+				>
+			</File>
+			<File
+				RelativePath=".\io\ioapi.h"
 				>
 			</File>
 			<File
@@ -235,7 +276,15 @@
 				>
 			</File>
 			<File
+				RelativePath=".\io\ip.h"
+				>
+			</File>
+			<File
 				RelativePath=".\io\ip_address.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\io\ip_address.h"
 				>
 			</File>
 			<File
@@ -243,7 +292,15 @@
 				>
 			</File>
 			<File
+				RelativePath=".\io\json.h"
+				>
+			</File>
+			<File
 				RelativePath=".\io\marshalls.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\io\marshalls.h"
 				>
 			</File>
 			<File
@@ -251,7 +308,15 @@
 				>
 			</File>
 			<File
+				RelativePath=".\io\md5.h"
+				>
+			</File>
+			<File
 				RelativePath=".\io\object_format_binary.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\io\object_format_binary.h"
 				>
 			</File>
 			<File
@@ -259,7 +324,15 @@
 				>
 			</File>
 			<File
+				RelativePath=".\io\object_format_xml.h"
+				>
+			</File>
+			<File
 				RelativePath=".\io\object_loader.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\io\object_loader.h"
 				>
 			</File>
 			<File
@@ -267,7 +340,15 @@
 				>
 			</File>
 			<File
+				RelativePath=".\io\object_saver.h"
+				>
+			</File>
+			<File
 				RelativePath=".\io\object_saver_base.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\io\object_saver_base.h"
 				>
 			</File>
 			<File
@@ -275,7 +356,15 @@
 				>
 			</File>
 			<File
+				RelativePath=".\io\packet_peer.h"
+				>
+			</File>
+			<File
 				RelativePath=".\io\resource_format_binary.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\io\resource_format_binary.h"
 				>
 			</File>
 			<File
@@ -283,7 +372,15 @@
 				>
 			</File>
 			<File
+				RelativePath=".\io\resource_format_xml.h"
+				>
+			</File>
+			<File
 				RelativePath=".\io\resource_loader.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\io\resource_loader.h"
 				>
 			</File>
 			<File
@@ -291,7 +388,19 @@
 				>
 			</File>
 			<File
+				RelativePath=".\io\resource_saver.h"
+				>
+			</File>
+			<File
+				RelativePath=".\io\SCsub"
+				>
+			</File>
+			<File
 				RelativePath=".\io\stream_peer.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\io\stream_peer.h"
 				>
 			</File>
 			<File
@@ -299,7 +408,15 @@
 				>
 			</File>
 			<File
+				RelativePath=".\io\stream_peer_tcp.h"
+				>
+			</File>
+			<File
 				RelativePath=".\io\tcp_server.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\io\tcp_server.h"
 				>
 			</File>
 			<File
@@ -307,7 +424,15 @@
 				>
 			</File>
 			<File
+				RelativePath=".\io\translation_loader_po.h"
+				>
+			</File>
+			<File
 				RelativePath=".\io\unzip.c"
+				>
+			</File>
+			<File
+				RelativePath=".\io\unzip.h"
 				>
 			</File>
 			<File
@@ -315,7 +440,19 @@
 				>
 			</File>
 			<File
+				RelativePath=".\io\xml_parser.h"
+				>
+			</File>
+			<File
 				RelativePath=".\io\zip.c"
+				>
+			</File>
+			<File
+				RelativePath=".\io\zip.h"
+				>
+			</File>
+			<File
+				RelativePath=".\io\zip_io.h"
 				>
 			</File>
 		</Filter>
@@ -772,6 +909,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\make_binders.pyc"
+			>
+		</File>
+		<File
 			RelativePath=".\map.h"
 			>
 		</File>
@@ -789,6 +930,10 @@
 		</File>
 		<File
 			RelativePath=".\method_bind.h"
+			>
+		</File>
+		<File
+			RelativePath=".\method_bind.inc"
 			>
 		</File>
 		<File

@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="godot_win"
-	ProjectGUID="{32EA24BE-3BCD-4918-A62A-6493999B3E04}"
-	RootNamespace="godot_win"
+	Name="javascript"
+	ProjectGUID="{99515877-A1C3-48F8-89D8-FF57F230608B}"
+	RootNamespace="javascript"
 	Keyword="Win32Proj"
 	TargetFrameworkVersion="196613"
 	>
@@ -165,12 +165,56 @@
 	<References>
 	</References>
 	<Files>
+		<Filter
+			Name="export"
+			>
+			<File
+				RelativePath=".\export\export.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\export\export.h"
+				>
+			</File>
+		</Filter>
 		<File
-			RelativePath="..\platform\nacl\html\index.html"
+			RelativePath=".\audio_driver_javascript.cpp"
 			>
 		</File>
 		<File
-			RelativePath="..\README.md"
+			RelativePath=".\audio_driver_javascript.h"
+			>
+		</File>
+		<File
+			RelativePath=".\detect.py"
+			>
+		</File>
+		<File
+			RelativePath=".\detect.pyc"
+			>
+		</File>
+		<File
+			RelativePath=".\javascript_main.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\logo.h"
+			>
+		</File>
+		<File
+			RelativePath=".\logo.png"
+			>
+		</File>
+		<File
+			RelativePath=".\os_javascript.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\os_javascript.h"
+			>
+		</File>
+		<File
+			RelativePath=".\platform_config.h"
 			>
 		</File>
 	</Files>

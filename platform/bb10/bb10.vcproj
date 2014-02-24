@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="main"
-	ProjectGUID="{DFBBCDA1-3684-46C2-A3D8-7BF95EC39223}"
-	RootNamespace="main"
+	Name="bb10"
+	ProjectGUID="{53B397D0-DB39-492A-9806-A1E198DC8A49}"
+	RootNamespace="bb10"
 	Keyword="Win32Proj"
 	TargetFrameworkVersion="196613"
 	>
@@ -20,7 +20,7 @@
 			Name="Debug|Win32"
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
-			ConfigurationType="4"
+			ConfigurationType="1"
 			CharacterSet="1"
 			>
 			<Tool
@@ -41,8 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="../;../core;../core/math;../platform/windows"
-				PreprocessorDefinitions="WIN32;_DEBUG;_LIB;DEBUG_ENABLED;TOOLS_ENABLED;MINIZIP_ENABLED"
+				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
@@ -60,10 +59,17 @@
 				Name="VCPreLinkEventTool"
 			/>
 			<Tool
-				Name="VCLibrarianTool"
+				Name="VCLinkerTool"
+				LinkIncremental="2"
+				GenerateDebugInformation="true"
+				SubSystem="2"
+				TargetMachine="1"
 			/>
 			<Tool
 				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCManifestTool"
 			/>
 			<Tool
 				Name="VCXDCMakeTool"
@@ -75,6 +81,9 @@
 				Name="VCFxCopTool"
 			/>
 			<Tool
+				Name="VCAppVerifierTool"
+			/>
+			<Tool
 				Name="VCPostBuildEventTool"
 			/>
 		</Configuration>
@@ -82,7 +91,7 @@
 			Name="Release|Win32"
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
-			ConfigurationType="4"
+			ConfigurationType="1"
 			CharacterSet="1"
 			WholeProgramOptimization="1"
 			>
@@ -105,7 +114,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
-				PreprocessorDefinitions="WIN32;NDEBUG;_LIB"
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
 				UsePrecompiledHeader="0"
@@ -122,10 +131,19 @@
 				Name="VCPreLinkEventTool"
 			/>
 			<Tool
-				Name="VCLibrarianTool"
+				Name="VCLinkerTool"
+				LinkIncremental="1"
+				GenerateDebugInformation="true"
+				SubSystem="2"
+				OptimizeReferences="2"
+				EnableCOMDATFolding="2"
+				TargetMachine="1"
 			/>
 			<Tool
 				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCManifestTool"
 			/>
 			<Tool
 				Name="VCXDCMakeTool"
@@ -137,6 +155,9 @@
 				Name="VCFxCopTool"
 			/>
 			<Tool
+				Name="VCAppVerifierTool"
+			/>
+			<Tool
 				Name="VCPostBuildEventTool"
 			/>
 		</Configuration>
@@ -144,28 +165,76 @@
 	<References>
 	</References>
 	<Files>
+		<Filter
+			Name="bar"
+			>
+		</Filter>
+		<Filter
+			Name="export"
+			>
+			<File
+				RelativePath="export\export.cpp"
+				>
+			</File>
+			<File
+				RelativePath="export\export.h"
+				>
+			</File>
+		</Filter>
 		<File
-			RelativePath=".\main.cpp"
+			RelativePath="audio_driver_bb10.cpp"
 			>
 		</File>
 		<File
-			RelativePath=".\main.h"
+			RelativePath="audio_driver_bb10.h"
 			>
 		</File>
 		<File
-			RelativePath=".\performance.cpp"
+			RelativePath="bbutil.c"
 			>
 		</File>
 		<File
-			RelativePath=".\performance.h"
+			RelativePath="bbutil.h"
 			>
 		</File>
 		<File
-			RelativePath=".\ReadMe.txt"
+			RelativePath="detect.py"
 			>
 		</File>
 		<File
-			RelativePath=".\splash.h"
+			RelativePath="detect.pyc"
+			>
+		</File>
+		<File
+			RelativePath="godot_bb10.cpp"
+			>
+		</File>
+		<File
+			RelativePath="logo.h"
+			>
+		</File>
+		<File
+			RelativePath="logo.png"
+			>
+		</File>
+		<File
+			RelativePath="os_bb10.cpp"
+			>
+		</File>
+		<File
+			RelativePath="os_bb10.h"
+			>
+		</File>
+		<File
+			RelativePath="payment_service.cpp"
+			>
+		</File>
+		<File
+			RelativePath="payment_service.h"
+			>
+		</File>
+		<File
+			RelativePath="platform_config.h"
 			>
 		</File>
 	</Files>

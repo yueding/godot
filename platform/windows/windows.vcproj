@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="main"
-	ProjectGUID="{DFBBCDA1-3684-46C2-A3D8-7BF95EC39223}"
-	RootNamespace="main"
+	Name="windows"
+	ProjectGUID="{732CC568-4FDD-4D0F-84DC-2B82E333502A}"
+	RootNamespace="windows"
 	Keyword="Win32Proj"
 	TargetFrameworkVersion="196613"
 	>
@@ -20,8 +20,8 @@
 			Name="Debug|Win32"
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
-			ConfigurationType="4"
-			CharacterSet="1"
+			ConfigurationType="1"
+			CharacterSet="0"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -40,9 +40,10 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
+				UseUnicodeResponseFiles="false"
 				Optimization="0"
-				AdditionalIncludeDirectories="../;../core;../core/math;../platform/windows"
-				PreprocessorDefinitions="WIN32;_DEBUG;_LIB;DEBUG_ENABLED;TOOLS_ENABLED;MINIZIP_ENABLED"
+				AdditionalIncludeDirectories="./;../../;../../core;../../core/math;../../drivers"
+				PreprocessorDefinitions="WIN32;_DEBUG;DEBUG_ENABLED;_WINDOWS;WINDOWS_ENABLED;OPENGL_ENABLED;GLES2_ENABLED;LEGACYGL_ENABLED;RTAUDIO_ENABLED"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
@@ -60,10 +61,18 @@
 				Name="VCPreLinkEventTool"
 			/>
 			<Tool
-				Name="VCLibrarianTool"
+				Name="VCLinkerTool"
+				AdditionalDependencies="opengl32.lib Winmm.lib Ws2_32.lib dsound.lib"
+				LinkIncremental="2"
+				GenerateDebugInformation="true"
+				SubSystem="1"
+				TargetMachine="1"
 			/>
 			<Tool
 				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCManifestTool"
 			/>
 			<Tool
 				Name="VCXDCMakeTool"
@@ -75,6 +84,9 @@
 				Name="VCFxCopTool"
 			/>
 			<Tool
+				Name="VCAppVerifierTool"
+			/>
+			<Tool
 				Name="VCPostBuildEventTool"
 			/>
 		</Configuration>
@@ -82,7 +94,7 @@
 			Name="Release|Win32"
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
-			ConfigurationType="4"
+			ConfigurationType="1"
 			CharacterSet="1"
 			WholeProgramOptimization="1"
 			>
@@ -105,7 +117,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
-				PreprocessorDefinitions="WIN32;NDEBUG;_LIB"
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
 				UsePrecompiledHeader="0"
@@ -122,10 +134,19 @@
 				Name="VCPreLinkEventTool"
 			/>
 			<Tool
-				Name="VCLibrarianTool"
+				Name="VCLinkerTool"
+				LinkIncremental="1"
+				GenerateDebugInformation="true"
+				SubSystem="2"
+				OptimizeReferences="2"
+				EnableCOMDATFolding="2"
+				TargetMachine="1"
 			/>
 			<Tool
 				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCManifestTool"
 			/>
 			<Tool
 				Name="VCXDCMakeTool"
@@ -137,6 +158,9 @@
 				Name="VCFxCopTool"
 			/>
 			<Tool
+				Name="VCAppVerifierTool"
+			/>
+			<Tool
 				Name="VCPostBuildEventTool"
 			/>
 		</Configuration>
@@ -144,28 +168,88 @@
 	<References>
 	</References>
 	<Files>
+		<Filter
+			Name="export"
+			>
+			<File
+				RelativePath=".\export\export.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\export\export.h"
+				>
+			</File>
+		</Filter>
 		<File
-			RelativePath=".\main.cpp"
+			RelativePath=".\context_gl_win.cpp"
 			>
 		</File>
 		<File
-			RelativePath=".\main.h"
+			RelativePath=".\context_gl_win.h"
 			>
 		</File>
 		<File
-			RelativePath=".\performance.cpp"
+			RelativePath=".\ctxgl_procaddr.cpp"
 			>
 		</File>
 		<File
-			RelativePath=".\performance.h"
+			RelativePath=".\ctxgl_procaddr.h"
 			>
 		</File>
 		<File
-			RelativePath=".\ReadMe.txt"
+			RelativePath=".\detect.py"
 			>
 		</File>
 		<File
-			RelativePath=".\splash.h"
+			RelativePath=".\detect.pyc"
+			>
+		</File>
+		<File
+			RelativePath=".\godot_win.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\key_mapping_win.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\key_mapping_win.h"
+			>
+		</File>
+		<File
+			RelativePath=".\lang_table.h"
+			>
+		</File>
+		<File
+			RelativePath=".\logo.png"
+			>
+		</File>
+		<File
+			RelativePath=".\os_windows.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\os_windows.h"
+			>
+		</File>
+		<File
+			RelativePath=".\platform_config.h"
+			>
+		</File>
+		<File
+			RelativePath=".\stream_peer_winsock.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\stream_peer_winsock.h"
+			>
+		</File>
+		<File
+			RelativePath=".\tcp_server_winsock.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\tcp_server_winsock.h"
 			>
 		</File>
 	</Files>

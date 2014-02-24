@@ -21,7 +21,7 @@
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="4"
-			CharacterSet="1"
+			CharacterSet="0"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -41,7 +41,8 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				PreprocessorDefinitions="WIN32;_DEBUG;_LIB"
+				AdditionalIncludeDirectories="../;../core;../core/math;../drivers;../platform/windows"
+				PreprocessorDefinitions="WIN32;_DEBUG;_LIB;DEBUG_ENABLED;WINDOWS_ENABLED;OPENGL_ENABLED;GLES1_ENABLED;GLES2_ENABLED;LEGACYGL_ENABLED;GLEW_ENABLED;RTAUDIO_ENABLED;TOOLS_ENABLED;PNG_ENABLED;JPG_ENABLED;DDS_ENABLED"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
